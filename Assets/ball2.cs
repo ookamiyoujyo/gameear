@@ -10,19 +10,18 @@ public class ball2 : MonoBehaviour {
     public Vector3 CharaPos { set { charaPos = value; } }
     //弾自身体の座標をセットする変数
     private Vector3 pos;
-
     // Use this for initialization
     void Start()
     {
         //弾の始点をセット（SetTama.csで始点に置いているので自分自身の位置を取得するだけ）
-        pos = this.gameObject.transform.position;
+        pos = gameObject.transform.position;
     }
 
     /**
      * 弾を飛ばす
      */
-    public void Tobu()
+    void Update()
     {
-        this.gameObject.GetComponent<Rigidbody>().velocity = new Vector3(pos.x - charaPos.x, pos.y - charaPos.y);
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(pos.x - charaPos.x, pos.y - charaPos.y);
     }
 }
