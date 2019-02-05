@@ -23,10 +23,10 @@ GameObject:
   - component: {fileID: 23068465878276940}
   - component: {fileID: 135591106869211608}
   - component: {fileID: 54532971755979914}
-  - component: {fileID: 114686166588319530}
+  - component: {fileID: 114267719904018884}
   m_Layer: 0
   m_Name: enemyballO
-  m_TagString: Untagged
+  m_TagString: playerdamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,7 +101,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114686166588319530
+--- !u!114 &114267719904018884
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1029924047088140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94513e722afa6114c9678869811052a6, type: 3}
+  m_Script: {fileID: 11500000, guid: a33a12fd840337f49a8354494166fbe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135591106869211608
@@ -119,7 +119,7 @@ SphereCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1029924047088140}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
