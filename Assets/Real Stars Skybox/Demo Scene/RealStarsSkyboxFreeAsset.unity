@@ -2538,6 +2538,26 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: 0.088
       objectReference: {fileID: 0}
+    - target: {fileID: 114271802525684630, guid: 411de9db9dcd5434899afed8338716fd,
+        type: 2}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 224928527848166686, guid: 411de9db9dcd5434899afed8338716fd,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224928527848166686, guid: 411de9db9dcd5434899afed8338716fd,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224928527848166686, guid: 411de9db9dcd5434899afed8338716fd,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 411de9db9dcd5434899afed8338716fd, type: 2}
   m_IsPrefabAsset: 0

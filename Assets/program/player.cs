@@ -7,7 +7,6 @@ public class player : MonoBehaviour
     int a = 1, i = 0;
     // bullet prefab
     public GameObject bullet;
-    public GameObject kamera;
     // 弾丸発射点
     public Transform muzzle;
 
@@ -20,16 +19,6 @@ public class player : MonoBehaviour
         // z キーが押された時
         if (Input.GetKey(KeyCode.Space))
         {
-            if (a == 1)
-            {
-                i++;
-                kamera.gameObject.transform.Translate(0.2f, 0, 0.14f);
-                if (i == 5)
-                {
-                    a = 0;
-                    i = 0;
-                }
-            }
             timeleft -= Time.deltaTime;
             if (timeleft <= 0.0)
             {
@@ -48,18 +37,6 @@ public class player : MonoBehaviour
                 bullets.transform.position = muzzle.position;
             }
         }
-        else
-        {
-            if (a == 0)
-            {
-                i++;
-                kamera.gameObject.transform.Translate(-0.2f, 0, -0.14f);
-                if (i == 5)
-                {
-                    a = 1;
-                    i = 0;
-                }
-            }
-        }
+
     }
 }

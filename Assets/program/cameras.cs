@@ -6,6 +6,8 @@ public class cameras : MonoBehaviour
 {
     public float spinSpeed = 0.5f;
     float distance = 10f;
+    public GameObject kamera;
+    int w = 0, a = 0, s = 0, d = 0;
 
     Vector3 pos = Vector3.zero;
     public Vector2 mouse = Vector2.zero;
@@ -45,18 +47,100 @@ public class cameras : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             x += speed;
+            if (!(d == 15))
+            {
+                d++;
+            }
+            if (d < 15)
+            {
+                kamera.gameObject.transform.Translate(-0.1f, 0, 0);
+            }
         }
+        else
+        {
+            if (!(d == 0))
+            {
+                d--;
+            }
+            if (d > 0)
+            {
+                kamera.gameObject.transform.Translate(0.1f, 0, 0);
+            }
+        }
+
+
         if (Input.GetKey(KeyCode.A))
         {
             x -= speed;
+            if (!(a== 15))
+            {
+                a++;
+            }
+            if (a < 15)
+            {
+                kamera.gameObject.transform.Translate(0.1f, 0, 0);
+            }
         }
+        else
+        {
+            if (!(a == 0))
+            {
+                a--;
+            }
+            if (a > 0)
+            {
+                kamera.gameObject.transform.Translate(-0.1f, 0, 0);
+            }
+        }
+
+
         if (Input.GetKey(KeyCode.W))
         {
             z += speed;
+            if (!(w == 15))
+            {
+                w++;
+            }
+            if (w < 15)
+            {
+                kamera.gameObject.transform.Translate(0, 0, -0.15f);
+            }
         }
+        else
+        {
+            if (!(w == 0))
+            {
+                w--;
+            }
+            if (w > 0)
+            {
+                kamera.gameObject.transform.Translate(0, 0, 0.15f);
+            }
+        }
+
+
         if (Input.GetKey(KeyCode.S))
         {
             z -= speed;
+            if (!(s == 15))
+            {
+                s++;
+            }
+            if (s < 15)
+            {
+                kamera.gameObject.transform.Translate(0, 0, 0.15f);
+            }
+        }
+        else
+        {
+            if (!(s == 0))
+            {
+                s--;
+            }
+            if (s > 0)
+            {
+                kamera.gameObject.transform.Translate(0, 0, -0.15f);
+            }
         }
 
         m_Rigidbody.velocity = z * transform.forward + x * transform.right;
