@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 135591106869211608}
   - component: {fileID: 54532971755979914}
   - component: {fileID: 114267719904018884}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: enemyballO
   m_TagString: playerdamage
   m_Icon: {fileID: 0}

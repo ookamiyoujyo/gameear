@@ -10,7 +10,7 @@ public class dameji1 : MonoBehaviour {
         if (other.gameObject.tag == "playerdamage")
         {
             dame++;
-            if (dame == 20)
+            if (dame == 50)
             {
                 Destroy(gameObject);
             }
