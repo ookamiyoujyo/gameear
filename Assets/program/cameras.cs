@@ -7,7 +7,7 @@ public class cameras : MonoBehaviour
     public float spinSpeed = 0.5f;
     float distance = 10f;
     public GameObject kamera;
-    int w = 0, a = 0, s = 0, d = 0;
+    int w = 0, a = 0, s = 0, d = 0, q = 0,e = 0 ;
 
     Vector3 pos = Vector3.zero;
     public Vector2 mouse = Vector2.zero;
@@ -43,6 +43,7 @@ public class cameras : MonoBehaviour
         // WASDで移動する
         float x = 0.0f;
         float z = 0.0f;
+        float y = 0.0f;
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -143,7 +144,56 @@ public class cameras : MonoBehaviour
             }
         }
 
-        m_Rigidbody.velocity = z * transform.forward + x * transform.right;
+
+        if (Input.GetKey(KeyCode.Q))
+        {
+            y += speed;
+            if (!(q == 15))
+            {
+                q++;
+            }
+            if (q < 15)
+            {
+                kamera.gameObject.transform.Translate(0, -0.1f, 0);
+            }
+        }
+        else
+        {
+            if (!(q == 0))
+            {
+                q--;
+            }
+            if (q > 0)
+            {
+                kamera.gameObject.transform.Translate(0, 0.1f, 0);
+            }
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            y -= speed;
+            if (!(e == 15))
+            {
+                e++;
+            }
+            if (e < 15)
+            {
+                kamera.gameObject.transform.Translate(0, 0.1f, 0);
+            }
+        }
+        else
+        {
+            if (!(e == 0))
+            {
+                e--;
+            }
+            if (e > 0)
+            {
+                kamera.gameObject.transform.Translate(0, -0.1f, 0);
+            }
+        }
+        m_Rigidbody.velocity = new Vector3(0, y, 0);
+        m_Rigidbody.velocity = z * transform.forward + x * transform.right + y * transform.up ;
     }
 
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TamaTobasu : MonoBehaviour {
+public class TamaTobasu3 : MonoBehaviour {
 
     //中心座標
     private Vector3 charaPos;
@@ -23,8 +23,6 @@ public class TamaTobasu : MonoBehaviour {
      */
     public void Tobu()
     {
-        Debug.Log("p"+pos);
-        Debug.Log("c"+charaPos);
-        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(pos.x - charaPos.x,0, pos.z - charaPos.z);
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(pos.x - charaPos.x, pos.y - charaPos.y , pos.z - charaPos.z);
     }
 }

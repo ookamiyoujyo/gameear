@@ -24,8 +24,9 @@ GameObject:
   - component: {fileID: 135591106869211608}
   - component: {fileID: 54452855795593366}
   - component: {fileID: 114505220272512814}
+  - component: {fileID: 114379646729946744}
   m_Layer: 8
-  m_Name: enemyball
+  m_Name: enemyballen1
   m_TagString: boll
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +102,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &114379646729946744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1029924047088140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70729e64b09858f4e8fe878e55ef6de1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114505220272512814
 MonoBehaviour:
   m_ObjectHideFlags: 1
