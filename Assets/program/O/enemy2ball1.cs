@@ -31,7 +31,7 @@ public class enemy2ball1 : MonoBehaviour
             var rad = deg * Mathf.Deg2Rad;
             var sin = Mathf.Sin(rad);
             var cos = Mathf.Cos(rad);
-            var pos = gameObject.transform.position + new Vector3(cos * 2.0f, sin * 2.0f, sin * 2.0f);
+            var pos = gameObject.transform.position + new Vector3(cos * 0.5f, sin * 0.5f, sin * 0.5f);
             var t = Instantiate(tama) as GameObject;
             t.transform.position = pos;
             /*追記*/
@@ -65,6 +65,7 @@ public class enemy2ball1 : MonoBehaviour
                 deg = 30;
                 hasMakeTama = false;
                 currentTime = 0;
+                list.Clear();
             }
         }
     }

@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class player : MonoBehaviour
 {
+
+    private float targetTime = 0.5f;
+    private float currentTime = 0;
+
+    bool hasMakeTama = false;
+
     int a = 1, i = 0;
     // bullet prefab
     public GameObject bullet;
@@ -19,24 +25,36 @@ public class player : MonoBehaviour
         // z キーが押された時
         if (Input.GetKey(KeyCode.Space))
         {
-            timeleft -= Time.deltaTime;
-            if (timeleft <= 0.0)
+            currentTime += Time.deltaTime;
+            if (currentTime >= targetTime)
             {
-                timeleft = 0.1f;
-                // 弾丸の複製
-                GameObject bullets = Instantiate(bullet) as GameObject;
+                hasMakeTama = true;
+                currentTime = 0;
+            }
+            if (hasMakeTama)
+            {
+                timeleft -= Time.deltaTime;
+                if (timeleft <= 0.0)
+                {
+                    timeleft = 0.1f;
+                    // 弾丸の複製
+                    GameObject bullets = Instantiate(bullet) as GameObject;
 
-                Vector3 force;
+                    Vector3 force;
 
-                force = this.gameObject.transform.forward * speed;
+                    force = this.gameObject.transform.forward * speed;
 
-                // Rigidbodyに力を加えて発射
-                bullets.GetComponent<Rigidbody>().AddForce(force);
+                    // Rigidbodyに力を加えて発射
+                    bullets.GetComponent<Rigidbody>().AddForce(force);
 
-                // 弾丸の位置を調整
-                bullets.transform.position = muzzle.position;
+                    // 弾丸の位置を調整
+                    bullets.transform.position = muzzle.position;
+                }
             }
         }
-
+        else
+        {
+            hasMakeTama = false;
+        }
     }
 }
